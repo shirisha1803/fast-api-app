@@ -79,7 +79,7 @@ async def scrape_website_text(url: str) -> Optional[str]:
     """Scrapes the text content from a given URL's homepage."""
     try:
         async with httpx.AsyncClient(follow_redirects=True) as client:
-            response = await client.get(url, timeout=10.0)
+            response = await client.get(url, timeout=90.0)
             response.raise_for_status()  # Raise an exception for HTTP errors (4xx or 5xx)
 
             soup = BeautifulSoup(response.text, 'html.parser')
