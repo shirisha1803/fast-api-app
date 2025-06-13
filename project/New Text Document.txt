@@ -1,0 +1,35 @@
+uvicorn app.main:app --reload --port 8000
+
+python chat_with_website.py
+
+Example Website to Use:
+URL: https://www.apple.com
+How to Test (Follow these steps in the chat_with_website.py terminal):
+When prompted for the URL:
+
+Enter the URL of the website you want to chat about (e.g., https://www.google.com): https://www.apple.com
+Once the "Agent:" prompt appears, try these questions one by one:
+
+Initial Query (Analyze-like):
+
+What are Apple's core products and services?
+Expected behavior: The agent should provide a list of Apple's primary products (iPhone, Mac, Apple Watch, etc.) and services (App Store, Apple Music, iCloud, etc.), based on scraping and analyzing the homepage.
+
+Follow-up Query (Conversational):
+
+Do they sell anything for home automation?
+Expected behavior: The agent should refer to products like HomePod, Apple TV, or HomeKit, if mentioned on the page, demonstrating the conversational aspect.
+
+Another Follow-up (Conversational):
+
+What's their latest phone model?
+Expected behavior: The agent should identify the latest iPhone model prominently featured on the homepage.
+
+Query about contact info:
+
+How can I contact their customer support?
+Expected behavior: The agent might mention a general "Support" link or section, or a phone number/email if explicitly prominent on the main page. (Note: Websites often hide direct contact details deep within support pages, so don't be surprised if it's not found on the homepage).
+
+Query for non-existent info:
+
+What is their stock price today?
